@@ -32,8 +32,9 @@ def notify(msg, bearer, sticker=None, picURI=None, pic=None):
 
 bearer = st.text_input('Bearer')
 message = st.text_area('message')
-response = notify(message, bearer)
-st.write(response)
-
-
-
+if st.button('送出'):
+    response = notify(message, bearer)
+    st.write(response)
+    
+    
+    
